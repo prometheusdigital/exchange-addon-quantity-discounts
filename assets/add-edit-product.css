@@ -1,0 +1,12 @@
+#it-exchange-product-quantity-discounts .label, #it-exchange-product-quantity-discounts > label {font-weight: bold;margin-bottom: 5px;}
+
+.it-exchange-product-quantity-discount-fields .discount-row {border: 1px solid #ebebeb;position:relative;}
+.it-exchange-product-quantity-discount-fields .discount-row:hover {background:#FAFAFA;}
+.it-exchange-product-quantity-discount-fields .discount-row.editing .title-row {cursor:n-resize;}
+.it-exchange-product-quantity-discount-fields .discount-row .title-row {padding: 12px;cursor:s-resize;}
+.it-exchange-product-quantity-discount-fields .discount-row .title-price{float:right}
+.it-exchange-product-quantity-discount-fields .editing .discount-row .title-price{display:none;}
+.it-exchange-product-quantity-discount-fields .it-exchange-quantity-discounts-content {padding: 12px;}
+.it-exchange-product-quantity-discount-fields .it-exchange-quantity-discounts-content label {margin-bottom:5px;}
+.it-exchange-product-quantity-discount-fields .it-exchange-quantity-discounts-content input {max-width: 100px;}
+.it-exchange-product-quantity-discount-fields .it-exchange-delete-quantity-discount {position: absolute;right: 0;top: 0;} 
