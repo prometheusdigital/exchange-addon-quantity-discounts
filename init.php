@@ -5,6 +5,11 @@
 include( 'class.quantity-discounts.php' );
 
 /**
+ * Hooks
+*/
+include( 'addon-hooks.php' );
+
+/**
  * Enqueue admin JS
  * 
 */
