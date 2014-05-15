@@ -58,7 +58,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 							<div class="discount-row existing-discount-row">
 								<div class="title-row">
 									<span class="title-text"><span class="title-text-quantity"><?php echo $discount_data['quantity']; ?></span> <?php _e( ' or more items'); ?></span></span>
-									<span class="title-price"><?php echo it_exchange_format_price( $discount_data['price'] ); ?></span>
+									<span class="title-price"><?php echo $discount_data['price']; ?></span>
 									<span class="title-edit"></span>
 								</div>
 								<div class="it-exchange-quantity-discounts-content hidden">
