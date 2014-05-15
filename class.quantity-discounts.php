@@ -64,7 +64,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 								<div class="it-exchange-quantity-discounts-content hidden">
 									<div class="cell quantity-cell">
 										<label><?php _e( 'Quantity', 'LION' ); ?></label>
-										<input type="number" name="it-exchange-product-quantity-discounts[<?php esc_attr_e( $int ); ?>][quantity]" value="<?php esc_attr_e( $discount_data['quantity'] ); ?>" />
+										<input type="number" class="quantity-field" name="it-exchange-product-quantity-discounts[<?php esc_attr_e( $int ); ?>][quantity]" value="<?php esc_attr_e( $discount_data['quantity'] ); ?>" />
 									</div>
 									<div class="cell price-cell">
 										<label><?php _e( 'Price', 'LION' ); ?></label>
