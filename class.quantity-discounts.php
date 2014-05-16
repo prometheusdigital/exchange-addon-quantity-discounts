@@ -33,7 +33,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 		$product_feature_value        = it_exchange_get_product_feature( $product->ID, 'quantity-discounts' );
 
 		// Set description
-		$description = __( 'Enable discounts for this product based on the quantity in the customer\'s cart.', 'LION' );
+		$description = __( 'Use this feature to set bulk discounts for products.', 'LION' );
 		$description = apply_filters( 'it_exchange_product_quantity_discounts_metabox_description', $description );
 
 		// Get currency settings
@@ -237,4 +237,4 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 		}
 	}
 }
-$IT_Exchange_Product_Feature_Quantity_Discounts = new IT_Exchange_Product_Feature_Quantity_Discounts( array( 'slug' => 'quantity-discounts', 'metabox_title' => __( 'Quantity Discounts', 'LION' ), 'description' => __( 'Discounted prices based on quantity purchased.', 'LION' ) ) );
+$IT_Exchange_Product_Feature_Quantity_Discounts = new IT_Exchange_Product_Feature_Quantity_Discounts( array( 'slug' => 'quantity-discounts', 'metabox_title' => __( 'Quantity Discounts', 'LION' ), 'description' => __( 'Allows store owners the ability to set bulk discounts for products.', 'LION' ) ) );
