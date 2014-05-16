@@ -2,7 +2,7 @@
 /*
  * Plugin Name: iThemes Exchange - Quantity Discounts
  * Version: 1.0.0
- * Description: Allows Store Owners the ability to set discounted prices per product when customers purchase more than one at a time.
+ * Description: Allows store owners the ability to set bulk discounts for products.
  * Plugin URI: http://ithemes.com/exchange/quantity-discounts/
  * Author: iThemes
  * Author URI: http://ithemes.com
@@ -29,10 +29,10 @@ function it_exchange_register_quantity_discounts_addon() {
 	if ( extension_loaded( 'mbstring' ) ) {
 		$options = array(
 			'name'              => __( 'Quantity Discounts', 'LION' ),
-			'description'       => __( 'Allows Store Owners the ability to set discounted prices per product when customers purchase more than one at a time.', 'LION' ),
+			'description'       => __( 'Allows store owners the ability to set bulk discounts for products.', 'LION' ),
 			'author'            => 'iThemes',
 			'author_url'        => 'http://ithemes.com/exchange/quantity-discounts/',
-			'icon'              => ITUtility::get_url_from_file( dirname( __FILE__ ) . '/lib/images/quantity-discount50px.png' ),
+			'icon'              => ITUtility::get_url_from_file( dirname( __FILE__ ) . '/quantity-discounts50px.png' ),
 			'file'              => dirname( __FILE__ ) . '/init.php',
 			'category'          => 'product-features',
 		);
