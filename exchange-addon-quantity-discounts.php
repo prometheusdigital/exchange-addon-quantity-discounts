@@ -26,18 +26,16 @@
  * @return void
 */
 function it_exchange_register_quantity_discounts_addon() {
-	if ( extension_loaded( 'mbstring' ) ) {
-		$options = array(
-			'name'              => __( 'Quantity Discounts', 'LION' ),
-			'description'       => __( 'Allows store owners the ability to set bulk discounts for products.', 'LION' ),
-			'author'            => 'iThemes',
-			'author_url'        => 'http://ithemes.com/exchange/quantity-discounts/',
-			'icon'              => ITUtility::get_url_from_file( dirname( __FILE__ ) . '/quantity-discounts50px.png' ),
-			'file'              => dirname( __FILE__ ) . '/init.php',
-			'category'          => 'product-features',
-		);
-		it_exchange_register_addon( 'quantity-discounts', $options );
-	}
+	$options = array(
+		'name'              => __( 'Quantity Discounts', 'LION' ),
+		'description'       => __( 'Allows store owners the ability to set bulk discounts for products.', 'LION' ),
+		'author'            => 'iThemes',
+		'author_url'        => 'http://ithemes.com/exchange/quantity-discounts/',
+		'icon'              => ITUtility::get_url_from_file( dirname( __FILE__ ) . '/quantity-discounts50px.png' ),
+		'file'              => dirname( __FILE__ ) . '/init.php',
+		'category'          => 'product-features',
+	);
+	it_exchange_register_addon( 'quantity-discounts', $options );
 }
 add_action( 'it_exchange_register_addons', 'it_exchange_register_quantity_discounts_addon' );
 
