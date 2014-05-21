@@ -45,7 +45,7 @@ add_action( 'it_exchange_register_addons', 'it_exchange_register_quantity_discou
  * Loads the translation data for WordPress
  *
  * @uses load_plugin_textdomain()
- * @since 1.0.3
+ * @since 1.0.0
  * @return void
 */
 function it_exchange_quantity_discounts_set_textdomain() {

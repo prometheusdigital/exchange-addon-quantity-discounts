@@ -3,7 +3,7 @@
  * This will control Quantity Discounts
  * By default, it registers a metabox on the product's add/edit screen and provides HTML / data for the frontend.
  *
- * @since CHANGME
+ * @since 1.0.0
  * @package IT_Exchange
 */
 class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product_Feature_Abstract {
@@ -11,7 +11,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 	/**
 	 * Constructor. Registers hooks
 	 *
-	 * @since 0.4.0
+	 * @since 1.0.0
 	 * @return void
 	*/
 	function IT_Exchange_Product_Feature_Quantity_Discounts( $args=array() ) {
@@ -21,7 +21,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 	/**
 	 * This echos the feature metabox.
 	 *
-	 * @since 0.4.0
+	 * @since 1.0.0
 	 * @return void
 	*/
 	function print_metabox( $post ) {
@@ -103,7 +103,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 	/**
 	 * This saves the value
 	 *
-	 * @since CHANGEME
+	 * @since 1.0.0
 	 *
 	 * @param object $post wp post object
 	 * @return void
@@ -146,7 +146,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 	/**
 	 * This updates the feature for a product
 	 *
-	 * @since CHANGEME
+	 * @since 1.0.0
 	 *
 	 * @param integer $product_id the product id
 	 * @param mixed $new_value the new value
@@ -175,7 +175,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 	/**
 	 * Return the product's features
 	 *
-	 * @since CHANGEME
+	 * @since 1.0.0
 	 * @param mixed $existing the values passed in by the WP Filter API. Ignored here.
 	 * @param integer product_id the WordPress post ID
 	 * @return string product feature
@@ -203,7 +203,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 	/**
 	 * Does the product have this feature?
 	 *
-	 * @since 0.4.0
+	 * @since 1.0.0
 	 * @param mixed $result Not used by core
 	 * @param integer $product_id
 	 * @return boolean
@@ -221,7 +221,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 	 * This is different than if it has the feature, a product can
 	 * support a feature but might not have the feature set.
 	 *
-	 * @since 0.4.0
+	 * @since 1.0.0
 	 * @param mixed $result Not used by core
 	 * @param integer $product_id
 	 * @return boolean
