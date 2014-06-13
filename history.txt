@@ -1,2 +1,4 @@
+1.0.1 - 2014-06-13 - Glenn Ansley
+	Removed anonymous function to support PHP versions < 5.3
 1.0.0 - 2014-05-21 - Glenn Ansley, Elise Alley
 	Initial Release
