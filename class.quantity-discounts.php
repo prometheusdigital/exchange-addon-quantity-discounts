@@ -136,11 +136,22 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 			}
 
 			// Sort by quantity
-			usort( $_POST['it-exchange-product-quantity-discounts'], function (array $a, array $b) { return $b['quantity'] - $a['quantity']; } );
+			usort( $_POST['it-exchange-product-quantity-discounts'], array( $this, 'sort_by_quantity' ) );
 
 			// Save
 			it_exchange_update_product_feature( $product_id, 'quantity-discounts', $_POST['it-exchange-product-quantity-discounts'] );
 		}
+	}
+
+	/**
+	 * Call back for the usort that sorts by quantity
+	 *
+	 * @since 1.0.1
+	 *
+	 * @return boolean
+	*/
+	function sort_by_quantity( array $a, array $b ) {
+		return $b['quantity'] - $a['quantity'];
 	}
 
 	/**
