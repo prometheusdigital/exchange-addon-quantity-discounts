@@ -58,7 +58,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 							<div class="discount-row existing-discount-row">
 								<div class="title-row">
 									<span class="title-text"><span class="title-text-quantity"><?php echo $discount_data['quantity']; ?></span> <?php _e( ' or more items'); ?></span></span>
-									<span class="title-price"><?php echo $discount_data['price']; ?></span>
+									<span class="title-price"><?php echo it_exchange_format_price( it_exchange_convert_from_database_number( $discount_data['price'] ) ); ?></span>
 									<span class="title-edit"></span>
 								</div>
 								<div class="it-exchange-quantity-discounts-content hidden">
@@ -68,7 +68,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 									</div>
 									<div class="cell price-cell">
 										<label><?php _e( 'Price', 'LION' ); ?></label>
-										<input type="text" class="price-field" name="it-exchange-product-quantity-discounts[<?php esc_attr_e( $int ); ?>][price]" value="<?php esc_attr_e( $discount_data['price'] ); ?>" data-thousands-separator="<?php esc_attr_e( $settings['currency-thousands-separator'] ); ?>" data-decimal-separator="<?php echo esc_attr_e( $settings['currency-decimals-separator'] ); ?>" data-symbol="<?php esc_attr_e( $currency ); ?>" data-symbol-position="<?php esc_attr_e( $settings['currency-symbol-position'] ); ?>"/>
+										<input type="text" class="price-field" name="it-exchange-product-quantity-discounts[<?php esc_attr_e( $int ); ?>][price]" value="<?php esc_attr_e( it_exchange_format_price( it_exchange_convert_from_database_number( $discount_data['price'] ) ) ); ?>" data-thousands-separator="<?php esc_attr_e( $settings['currency-thousands-separator'] ); ?>" data-decimals-separator="<?php echo esc_attr_e( $settings['currency-decimals-separator'] ); ?>" data-symbol="<?php esc_attr_e( $currency ); ?>" data-symbol-position="<?php esc_attr_e( $settings['currency-symbol-position'] ); ?>"/>
 									</div>
 								</div>
 								<a href="" class="it-exchange-delete-quantity-discount it-exchange-remove-item hide-if-js">&times;</a>
@@ -90,7 +90,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 							</div>
 							<div class="cell price-cell">
 								<label><?php _e( 'Price', 'LION' ); ?></label>
-								<input type="text" class="price-field" name="it-exchange-product-quantity-discounts[<?php esc_attr_e( $int ); ?>][price]" value="" data-thousands-separator="<?php esc_attr_e( $settings['currency-thousands-separator'] ); ?>" data-decimal-separator="<?php echo esc_attr_e( $settings['currency-decimals-separator'] ); ?>" data-symbol="<?php esc_attr_e( $currency ); ?>" data-symbol-position="<?php esc_attr_e( $settings['currency-symbol-position'] ); ?>"/>
+								<input type="text" class="price-field" name="it-exchange-product-quantity-discounts[<?php esc_attr_e( $int ); ?>][price]" value="" data-thousands-separator="<?php esc_attr_e( $settings['currency-thousands-separator'] ); ?>" data-decimals-separator="<?php echo esc_attr_e( $settings['currency-decimals-separator'] ); ?>" data-symbol="<?php esc_attr_e( $currency ); ?>" data-symbol-position="<?php esc_attr_e( $settings['currency-symbol-position'] ); ?>"/>
 							</div>
 						</div>
 						<a href="" class="it-exchange-delete-quantity-discount it-exchange-remove-item">&times;</a>
@@ -131,8 +131,11 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 		if ( isset( $_POST['it-exchange-product-quantity-discounts'] ) ) {
 			// Remove empty values
 			foreach( (array) $_POST['it-exchange-product-quantity-discounts'] as $key => $data ) {
-				if ( empty( $data['quantity'] ) || empty( $data['price'] ) )
+				if ( empty( $data['quantity'] ) || empty( $data['price'] ) ) {
 					unset( $_POST['it-exchange-product-quantity-discounts'][$key] );
+				} else {
+					$_POST['it-exchange-product-quantity-discounts'][$key]['price'] = it_exchange_convert_to_database_number( $data['price'] );
+				}
 			}
 
 			// Sort by quantity

@@ -24,7 +24,7 @@ function it_exchange_modify_cart_product_base_price_for_quantity_discount_addon(
 	// Loop through (they're sorted from highest to lowest
 	foreach( (array) $quantity_discounts as $key => $data ) {
 		if ( $cart_quantity >= (int) $data['quantity'] ) {
-			$price = preg_replace("/[^0-9,.]/", "", $data['price'] );
+			$price = it_exchange_convert_from_database_number( $data['price'] );
 			return empty( $format ) ? $price : it_exchange_format_price( $price );
 		}
 	}
