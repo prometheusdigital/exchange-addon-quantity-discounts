@@ -14,8 +14,18 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 	 * @since 1.0.0
 	 * @return void
 	*/
-	function IT_Exchange_Product_Feature_Quantity_Discounts( $args=array() ) {
+	function __construct( $args=array() ) {
 		parent::__construct( $args );
+	}
+
+	/**
+	 * Constructor. Registers hooks
+	 *
+	 * @since 1.0.0
+	 * @return void
+	*/
+	function IT_Exchange_Product_Feature_Quantity_Discounts( $args=array() ) {
+		self::__construct( $args );
 	}
 
 	/**
