@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: iThemes Exchange - Quantity Discounts
- * Version: 1.0.5
+ * Version: 1.1.0
  * Description: Allows store owners the ability to set bulk discounts for products.
  * Plugin URI: http://ithemes.com/exchange/quantity-discounts/
  * Author: iThemes
