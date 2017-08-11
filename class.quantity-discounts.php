@@ -35,7 +35,7 @@ class IT_Exchange_Product_Feature_Quantity_Discounts extends IT_Exchange_Product
 	 * @return void
 	*/
 	function print_metabox( $post ) {
-		// Grab the iThemes Exchange Product object from the WP $post object
+		// Grab the ExchangeWP Product object from the WP $post object
 		$product = it_exchange_get_product( $post );
 
 		// Set the value of the feature for this product
